@@ -1,42 +1,17 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import ReactDOM from "react-dom/client";
-//import Todos from "./Todos";
-//import "./Styles.css";
-//import Car from "./Car.js";
-import "./my-sass.scss";
-/*
-const App = () => {
-  const [count, setCount] = useState(0);
-  const [todos, setTodos] = useState(["todo 1", "todo 2"]);
 
-  const increment = () => {
-    setCount((c) => c + 1);
-  };
+function Timer() {
+  const [count, setCount] = useState(100);
 
-  return (
-    <>
-      <Todos todos={todos} />
-      <hr />
-      <div>
-        Count: {count}
-        <button onClick={increment}>+</button>
-      </div>
-    </>
-  );
-};
-*/
+  useEffect(() => {
+    setTimeout(() => {
+      setCount((count) => count - 1);
+    }, 1000);
+  });
 
-
-const Header = () => {
-  return (
-    <>
-      <h1>Hello Style!</h1>
-      <p>Add a little style!.</p>
-    </>
-  );
-};
+  return <h1>Rendering will stop in {count} seconds!</h1>;
+}
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-//root.render(<App />);
-//root.render(<Car />);
-root.render(<Header />);
+root.render(<Timer />);
