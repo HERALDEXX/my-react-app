@@ -1,0 +1,19 @@
+body {
+    background-color: rgb(128, 0, 0);
+    background-image: radial-gradient(circle, #0f2027, #203a43, #2c5364, #4ca1af, #c4e0e5, #f7ff00, #db36a4, #ff4e50, #f9d423);
+    color: white;
+    padding: 40px;
+    text-align: center;
+}
+
+h1 {
+    font-size: xx-large;
+    font-weight: bold;
+    font-family: sans-serif;
+    color: rgb(207, 207, 0);
+}
+
+p {
+    font-weight: light;
+    color: #4ca1af;
+}
